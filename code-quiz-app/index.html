@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python 代码填空练习</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="panel sidebar">
+        <div class="brand">
+          <p class="eyebrow">Code Quiz Studio</p>
+          <h1>代码填空练习</h1>
+          <p class="muted">填入正确代码，检查是否能正确运行。</p>
+        </div>
+
+        <section class="control-group">
+          <h2>题目列表</h2>
+          <div class="question-list" id="question-list"></div>
+        </section>
+
+        <section class="control-group">
+          <h2>刷题顺序</h2>
+          <div class="segment" id="order-segment">
+            <button data-order="sequential" class="active">按顺序</button>
+            <button data-order="random">随机乱序</button>
+          </div>
+        </section>
+
+        <section class="stats-card">
+          <h2>统计</h2>
+          <div class="stats-list">
+            <div><span>总题数</span><strong id="total-count">0</strong></div>
+            <div><span>已完成</span><strong id="done-count">0</strong></div>
+            <div><span>总填空数</span><strong id="blank-count">0</strong></div>
+            <div><span>填对数</span><strong id="correct-count">0</strong></div>
+          </div>
+        </section>
+
+        <section class="control-group">
+          <h2>操作</h2>
+          <div class="action-list">
+            <button id="prev-btn" class="ghost">上一题</button>
+            <button id="next-btn" class="ghost">下一题</button>
+            <button id="clear-all-btn" class="ghost danger">清空所有数据</button>
+          </div>
+        </section>
+      </aside>
+
+      <main class="panel content">
+        <section class="hero">
+          <p class="eyebrow">Python Fill-in-the-Blank</p>
+          <h2 id="session-title">加载中...</h2>
+          <p class="muted" id="session-subtitle">正在读取题库。</p>
+        </section>
+
+        <section class="code-area" id="code-area"></section>
+
+        <section class="bottom-actions">
+          <button id="submit-btn" class="primary">检查答案</button>
+          <button id="show-btn" class="ghost">显示答案</button>
+          <button id="clear-btn" class="ghost">清空本题</button>
+        </section>
+
+        <div id="feedback" class="feedback hidden"></div>
+      </main>
+    </div>
+
+    <script src="./code_questions.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

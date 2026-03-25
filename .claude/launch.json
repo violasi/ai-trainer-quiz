@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "quiz-app",
+      "runtimeExecutable": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11",
+      "runtimeArgs": ["-m", "http.server", "8765", "-d", "quiz-app"],
+      "port": 8765
+    },
+    {
+      "name": "code-quiz",
+      "runtimeExecutable": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11",
+      "runtimeArgs": ["-m", "http.server", "8766", "-d", "code-quiz-app"],
+      "port": 8766
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x \"/Users/user/Documents/aigc/test/quiz-app/开始刷题.command\")",
+      "Bash(mv \"开始刷题.bat\" \"开始刷题\\(Windows双击打开\\).bat\")",
+      "Bash(mv \"开始刷题.command\" \"开始刷题\\(Mac双击打开\\).command\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(/usr/bin/python3 build_code_questions.py)",
+      "Bash(/usr/bin/python3 -c \":*)",
+      "Bash(/usr/bin/python3:*)",
+      "Bash(chmod +x \"/Users/user/Documents/aigc/test/code-quiz-app/开始刷题\\(Mac双击打开\\).command\")",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11)",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11 -c \"import playwright; print\\(''ok''\\)\")",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11 -c \"from selenium import webdriver; print\\(''ok''\\)\")",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.11/bin/pip3.11 install:*)",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11 -m playwright install chromium)",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11 -c \"from playwright.sync_api import sync_playwright; print\\(''playwright ok''\\)\")",
+      "Bash(/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11 -c \":*)"
+    ]
+  }
+}
