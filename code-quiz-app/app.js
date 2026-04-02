@@ -194,9 +194,9 @@ function checkAnswers() {
       const userVal = input.value.trim();
       const expected = answer.trim();
 
-      // 精确匹配或者去除多余空格后匹配
-      const normalizeWs = (s) => s.replace(/\s+/g, " ");
-      const isCorrect = userVal === expected || normalizeWs(userVal) === normalizeWs(expected);
+      // 精确匹配或者去除多余空格后匹配（忽略逗号、括号、运算符等旁边的可选空格）
+      const normalizeCode = (s) => s.replace(/\s+/g, "");
+      const isCorrect = userVal === expected || normalizeCode(userVal) === normalizeCode(expected);
 
       input.classList.remove("correct", "incorrect");
       if (userVal === "") {
@@ -309,8 +309,8 @@ function updateStats() {
       cell.answers.forEach((answer) => {
         const userVal = (prog.answers[String(globalIdx)] || "").trim();
         const expected = answer.trim();
-        const normalizeWs = (str) => str.replace(/\s+/g, " ");
-        if (userVal && (userVal === expected || normalizeWs(userVal) === normalizeWs(expected))) {
+        const normalizeCode = (str) => str.replace(/\s+/g, "");
+        if (userVal && (userVal === expected || normalizeCode(userVal) === normalizeCode(expected))) {
           s++;
         }
         globalIdx++;
